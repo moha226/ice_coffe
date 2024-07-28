@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ice_cofe__menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="shortcut icon" type="image/jpeg" href="logo.jpeg">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .menu-item {
+            background-color: #3a3a3a;
+            color: #e0e0e0;
+            box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode header {
+            background-color: #444;
+        }
+
+        body.dark-mode footer {
+            background-color: #444;
+        }
+
+        /* Adjusting the price color in dark mode */
+        body.dark-mode .menu-item .price {
+            color: #ffd700;
+            /* Gold color for better visibility */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .dark-mode-toggle {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            color: #ccc;
+        }
+
+        /* Menu Styles */
+        .menu-section {
+            padding: 20px;
+            transition: color 0.5s;
+        }
+
+        .menu-section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s, color 0.5s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            transition: background-color 0.5s, color 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ice_coffee</h1>
+        <button class="dark-mode-toggle" id="darkMode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <div class="menu-section">
+        <h2>ميلك تشيك</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>تشيك مانجو <span class="price">40</span></h3>
+                <h3>تشيك فراوله <span class="price">40</span></h3>
+                <h3>تشيك فانيليا <span class="price">40</span></h3>
+                <h3>تشيك شوكليت <span class="price">50</span></h3>
+                <h3>تشيك لوتس <span class="price">50</span></h3>
+                <h3>تشيك نوتيلا <span class="price">45</span></h3>
+                <h3>تشيك اوريو <span class="price">45</span></h3>
+                <h3>تشيك هوهوز <span class="price">50</span></h3>
+                <h3>تشيك توينكز <span class="price">55</span></h3>
+                <h3>تشيك بستاشيو <span class="price">60</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>الوافل</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>وافل نوتيلا <span class="price">45</span></h3>
+                <h3>وافل لوتس <span class="price">55</span></h3>
+                <h3>وافل ميكس <span class="price">50</span></h3>
+                <h3>وافل فور سيزون <span class="price">55</span></h3>
+                <h3>وافل فروت <span class="price">60</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>اسموزي</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>مانجو <span class="price">45</span></h3>
+                <h3>بطيخ <span class="price">45</span></h3>
+                <h3>فراوله <span class="price">40</span></h3>
+                <h3>لمون نعناع <span class="price">40</span></h3>
+                <h3>بلوبيري <span class="price">45</span></h3>
+            </div>
+        </div>
+    </div>
+    <div class="menu-section">
+        <h2>ايس كريم</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>ايس كريم ايس كوفي <span class="price">50</span></h3>
+                <h3>ايس كريم 1 بوله <span class="price">10</span></h3>
+                <h3>ايس كريم 2 بوله <span class="price">20</span></h3>
+                <h3>ايس كريم 3 بوله <span class="price">30</span></h3>
+                <h3>ايس كريم 4 بوله <span class="price">40</span></h3>
+                <h3>ايس كريم ساده <span class="price">45</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>مشروبات ساخنه</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>شاي <span class="price">10</span></h3>
+                <h3>شاي اخضر <span class="price">10</span></h3>
+                <h3>شاي لاتية <span class="price">25</span></h3>
+                <h3>اعشاب <span class="price">10</span></h3>
+                <h3>سحلب ساده <span class="price">25</span></h3>
+                <h3>سحلب مكسرات <span class="price">30</span></h3>
+                <h3>سحلب نوتيلا <span class="price">30</span></h3>
+                <h3>هوت شوكيلت <span class="price">30</span></h3>
+                <h3>هوت اوريو <span class="price">30</span></h3>
+                <h3>هوت لوتس <span class="price">35</span></h3>
+                <h3>هوت نوتيلا <span class="price">30</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>مشروبا اسبريسوا</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>اسبرسوا <span class="price">20</span></h3>
+                <h3>ميكاتو <span class="price">30</span></h3>
+                <h3>كابتشينو <span class="price">35</span></h3>
+                <h3>لاتيه <span class="price">40</span></h3>
+                <h3>هوت موكا <span class="price">40</span></h3>
+                <h3>كورنادو <span class="price">30</span></h3>
+                <h3>امريكان كوفى <span class="price">30</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>مشروبات القهوه</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>قهوه تركي <span class="price">15 - 20</span></h3>
+                <h3>قهوة فرنساوى <span class="price">25 - 30</span></h3>
+                <h3>قهوة بندق <span class="price">25 - 30</span></h3>
+                <h3>بندق قطع <span class="price">25 - 30</span></h3>
+                <h3>قهوه فلفر <span class="price">30 - 35</span></h3>
+                <h3>نسكاافيه <span class="price">30</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>ايس كوفي</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>ايس لاتيه <span class="price">45</span></h3>
+                <h3>ايس كوفي <span class="price">45</span></h3>
+                <h3>ايس موكا <span class="price">45</span></h3>
+                <h3>فرابيه <span class="price">45</span></h3>
+                <h3>فرابيتشينو <span class="price">50</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>عصائر فريش</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>مانجو <span class="price">35</span></h3>
+                <h3>جوافة <span class="price">30</span></h3>
+                <h3>فراولة <span class="price">30</span></h3>
+                <h3>كانتلوب <span class="price">30</span></h3>
+                <h3>بطيخ <span class="price">35</span></h3>
+                <h3>اناناس <span class="price">40</span></h3>
+                <h3>افوكادو <span class="price">50</span></h3>
+                <h3>كيوى حليب <span class="price">45</span></h3>
+                <h3>بلح <span class="price">35</span></h3>
+                <h3>موز حليب <span class="price">30</span></h3>
+                <h3>لمون <span class="price">25</span></h3>
+                <h3>لمون نعناع <span class="price">30</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2>ميكس صودا</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>صن شاين <span class="price">30</span></h3>
+                <h3>صن رايز <span class="price">30</span></h3>
+                <h3>شرى كولا <span class="price">35</span></h3>
+                <h3>صودا بلوبيري <span class="price">35</span></h3>
+                <h3>صودا ميكس بيرى <span class="price">35</span></h3>
+                <h3>صودا كيوى <span class="price">35</span></h3>
+                <h3>موهيتو <span class="price">35</span></h3>
+                <h3>هيد هامر <span class="price">50</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>إدارة: عصام عبد الفتاح</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('darkMode');
+        const bodyElement = document.body;
+
+        // Load the theme from localStorage if available
+        if (localStorage.getItem('theme') === 'dark') {
+            bodyElement.classList.add('dark-mode');
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            bodyElement.classList.remove('dark-mode');
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+
+        // Toggle dark mode
+        toggleButton.addEventListener('click', () => {
+            bodyElement.classList.toggle('dark-mode');
+            const isDarkMode = bodyElement.classList.contains('dark-mode');
+            toggleButton.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+
+            // Save the user's theme preference in localStorage
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+    </script>
+
+</body>
+
+</html>
